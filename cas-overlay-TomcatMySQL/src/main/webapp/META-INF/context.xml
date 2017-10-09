@@ -10,8 +10,8 @@
     <Resource name="jndi/CASDS" auth="Container"
         type="javax.sql.DataSource"
         driverClassName="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://winserver2:3306/cas" username="CAS"
-        password="Fuckyou1!" maxTotal="5" maxWaitMillis="-1" />
+        url="jdbc:mysql://devdb:3306/cas" username="CAS"
+        password="Happygo1!" maxTotal="5" maxWaitMillis="-1" />
     
 
 </Context>
