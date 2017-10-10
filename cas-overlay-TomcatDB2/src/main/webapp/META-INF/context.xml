@@ -5,13 +5,13 @@
         loaderClass="org.springframework.instrument.classloading.tomcat.TomcatInstrumentableClassLoader"/>
 	-->
 	   
-    <!-- MySQL -->
+    <!-- DB2 -->
       
-    <Resource name="jndi/CASDS" auth="Container"
+    <Resource name="jndi/EASDS" auth="Container"
         type="javax.sql.DataSource"
-        driverClassName="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://winserver2:3306/cas" username="CAS"
-        password="Fuckyou1!" maxTotal="5" maxWaitMillis="-1" />
+        driverClassName="com.ibm.db2.jcc.DB2Driver"
+        url="jdbc:db2://devdb:50000/Sample" username="CAS"
+        password="Happygo1!" maxActive="5" maxIdle="10" maxWait="-1" />
     
 
 </Context>
