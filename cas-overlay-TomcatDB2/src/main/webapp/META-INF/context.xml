@@ -7,7 +7,7 @@
 	   
     <!-- DB2 -->
       
-    <Resource name="jndi/EASDS" auth="Container"
+    <Resource name="jndi/CASDS" auth="Container"
         type="javax.sql.DataSource"
         driverClassName="com.ibm.db2.jcc.DB2Driver"
         url="jdbc:db2://devdb:50000/Sample" username="CAS"
