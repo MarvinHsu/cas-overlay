@@ -5,7 +5,7 @@
 	<groupId>com.hsuforum.cas-overlay</groupId>
 	<artifactId>cas-overlay-JBossDB2</artifactId>
 	<packaging>war</packaging>
-	<version>1.0</version>
+	<version>1.0.1</version>
 
 	<build>
 		<plugins>
@@ -19,14 +19,23 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${springboot.version}</version>
-				<configuration>
-					<mainClass>org.springframework.boot.loader.WarLauncher</mainClass>
-					<addResources>true</addResources>
-				</configuration>
-			</plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${springboot.version}</version>
+                <configuration>
+                    <mainClass>${mainClassName}</mainClass>
+                    <addResources>true</addResources>
+                    <executable>${isExecutable}</executable>
+                    <layout>WAR</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -109,11 +118,13 @@
 
 
 	<properties>
-		<cas.version>5.1.5</cas.version>
-		<springboot.version>1.5.3.RELEASE</springboot.version>
+		<cas.version>5.2.4</cas.version>
+		<springboot.version>1.5.8.RELEASE</springboot.version>
 		<!-- app.server could be -jetty, -undertow, -tomcat, or blank if you plan 
 			to provide appserver -->
 		<app.server></app.server>
+		<mainClassName>org.springframework.boot.loader.WarLauncher</mainClassName>
+		<isExecutable>false</isExecutable>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
