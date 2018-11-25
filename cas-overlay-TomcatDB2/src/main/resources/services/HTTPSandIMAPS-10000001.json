@@ -16,6 +16,8 @@
     "ssoEnabled" : true
   },
   "attributeReleasePolicy" : {
-    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+    "@class" : "org.apereo.cas.services.ReturnAllowedAttributeReleasePolicy",
+    "allowedAttributes" : [ "java.util.ArrayList", [ "sAMAccountName", "sn", "cn", "givenName", "displayName", "memberOf" ] ],
+    "authorizedToReleaseProxyGrantingTicket" : true
   }
 }
