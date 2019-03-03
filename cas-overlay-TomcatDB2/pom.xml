@@ -5,7 +5,7 @@
 	<groupId>com.hsuforum.cas-overlay</groupId>
 	<artifactId>cas-overlay-TomcatDB2</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 
 	<build>
 		<plugins>
@@ -107,15 +107,15 @@
 	</dependencies>
 
 	<properties>
-		<cas.version>5.3.6</cas.version>
-		<springboot.version>1.5.14.RELEASE</springboot.version>
+		<cas.version>6.0.1</cas.version>
+		<springboot.version>2.1.2.RELEASE</springboot.version>
 		<!-- app.server could be -jetty, -undertow, -tomcat, or blank if you plan 
 			to provide appserver -->
 		<app.server>-tomcat</app.server>
-		<mainClassName>org.springframework.boot.loader.WarLauncher</mainClassName>
-		<isExecutable>false</isExecutable>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<mainClassName>org.apereo.cas.web.CasWebApplication</mainClassName>
+		<isExecutable>true</isExecutable>
+		<maven.compiler.source>1.11</maven.compiler.source>
+		<maven.compiler.target>1.11</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
