@@ -5,7 +5,7 @@
 	<groupId>com.hsuforum.cas-overlay</groupId>
 	<artifactId>cas-overlay-TomcatSQLServer</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.6</version>
+	<version>1.0.7</version>
 
 	<build>
 		<plugins>
