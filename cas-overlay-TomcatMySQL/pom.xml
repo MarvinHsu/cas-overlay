@@ -117,6 +117,26 @@
 
 	<repositories>
 		<repository>
+			<id>central</id>
+			<name>Maven central repository</name>
+			<layout>default</layout>
+			<url>https://repo1.maven.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>JCenter</id>
+			<name>JCenter Repository</name>
+			<layout>default</layout>
+			<url>https://jcenter.bintray.com/</url>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<url>https://repo.spring.io/libs-milestone</url>
+		</repository>
+		<repository>
+			<id>spring-snapshot</id>
+			<url>https://repo.spring.io/libs-snapshot</url>
+		</repository>
+		<repository>
 			<id>sonatype-releases</id>
 			<url>http://oss.sonatype.org/content/repositories/releases/</url>
 			<snapshots>
@@ -139,10 +159,6 @@
 		<repository>
 			<id>shibboleth-releases</id>
 			<url>https://build.shibboleth.net/nexus/content/repositories/releases</url>
-		</repository>
-		<repository>
-			<id>spring-milestones</id>
-			<url>https://repo.spring.io/milestone</url>
 		</repository>
 	</repositories>
 
