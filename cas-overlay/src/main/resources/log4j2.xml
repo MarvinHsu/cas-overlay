@@ -2,7 +2,7 @@
 <!-- Specify the refresh internal in seconds. -->
 <Configuration monitorInterval="5" packages="org.apereo.cas.logging">
     <Properties>
-        <Property name="baseDir">C:/Application/cas/Log</Property>
+        <Property name="baseDir">/Application/cas/Log</Property>
         <Property name="cas.log.level">info</Property>
         <Property name="spring.webflow.log.level">warn</Property>
         <Property name="spring.security.log.level">info</Property>
