@@ -207,10 +207,10 @@
 			</activation>
 			<properties>
 				<cas.ticket.registry.jpa.dialect>org.hibernate.dialect.MySQL8Dialect</cas.ticket.registry.jpa.dialect>
-				<cas.ticket.registry.jpa.url>jdbc:mysql://192.168.168.35:3306/cas</cas.ticket.registry.jpa.url>
+				<cas.ticket.registry.jpa.url>jdbc:mysql://devdb:3306/cas</cas.ticket.registry.jpa.url>
 				<cas.ticket.registry.jpa.driverClass>com.mysql.cj.jdbc.Driver</cas.ticket.registry.jpa.driverClass>
 				<cas.ticket.registry.jpa.user>CAS</cas.ticket.registry.jpa.user>
-				<cas.ticket.registry.jpa.password>Fuckyou1!</cas.ticket.registry.jpa.password>
+				<cas.ticket.registry.jpa.password>Happygo1!</cas.ticket.registry.jpa.password>
 			</properties>
 			<dependencies>
 				<dependency>
