@@ -104,11 +104,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apereo.cas</groupId>
-			<artifactId>cas-server-support-jpa-ticket-registry</artifactId>
-			<version>${cas.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apereo.cas</groupId>
 			<artifactId>cas-server-support-json-service-registry</artifactId>
 			<version>${cas.version}</version>
 		</dependency>
@@ -125,8 +120,8 @@
 	</dependencies>
 
 	<properties>
-		<cas.version>6.4.5</cas.version>
-		<springboot.version>2.5.4</springboot.version>
+		<cas.version>6.5.0</cas.version>
+		<springboot.version>2.6.3</springboot.version>
 		<!-- app.server could be -jetty, -undertow, -tomcat, or blank if you plan 
 			to provide appserver -->
 		<app.server>-tomcat</app.server>
@@ -183,95 +178,6 @@
 			<url>https://build.shibboleth.net/nexus/content/repositories/releases</url>
 		</repository>
 	</repositories>
-	<profiles>
-		<profile>
-			<id>tomcat-db2</id>
-			<properties>
-				<cas.ticket.registry.jpa.dialect>org.hibernate.dialect.DB2Dialect</cas.ticket.registry.jpa.dialect>
-				<cas.ticket.registry.jpa.url>jdbc:db2://devdb:50000/Sample</cas.ticket.registry.jpa.url>
-				<cas.ticket.registry.jpa.driverClass>com.ibm.db2.jcc.DB2Driver</cas.ticket.registry.jpa.driverClass>
-				<cas.ticket.registry.jpa.user>CAS</cas.ticket.registry.jpa.user>
-				<cas.ticket.registry.jpa.password>Happygo1!</cas.ticket.registry.jpa.password>
-			</properties>
-			<dependencies>
-				<dependency>
-					<groupId>com.ibm.db2</groupId>
-					<artifactId>jcc</artifactId>
-				</dependency>
-			</dependencies>
-		</profile>
-		<profile>
-			<id>tomcat-mysql</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<cas.ticket.registry.jpa.dialect>org.hibernate.dialect.MySQL8Dialect</cas.ticket.registry.jpa.dialect>
-				<cas.ticket.registry.jpa.url>jdbc:mysql://devdb:3306/cas</cas.ticket.registry.jpa.url>
-				<cas.ticket.registry.jpa.driverClass>com.mysql.cj.jdbc.Driver</cas.ticket.registry.jpa.driverClass>
-				<cas.ticket.registry.jpa.user>CAS</cas.ticket.registry.jpa.user>
-				<cas.ticket.registry.jpa.password>Happygo1!</cas.ticket.registry.jpa.password>
-			</properties>
-			<dependencies>
-				<dependency>
-					<groupId>mysql</groupId>
-					<artifactId>mysql-connector-java</artifactId>
-					<version>8.0.19</version>
-				</dependency>
-			</dependencies>
-		</profile>
-		<profile>
-			<id>tomcat-oracle</id>
-			<properties>
-				<cas.ticket.registry.jpa.dialect>org.hibernate.dialect.Oracle10gDialect</cas.ticket.registry.jpa.dialect>
-				<cas.ticket.registry.jpa.url>jdbc:oracle:thin:@devdb:1521:orcl</cas.ticket.registry.jpa.url>
-				<cas.ticket.registry.jpa.driverClass>oracle.jdbc.OracleDriver</cas.ticket.registry.jpa.driverClass>
-				<cas.ticket.registry.jpa.user>CAS</cas.ticket.registry.jpa.user>
-				<cas.ticket.registry.jpa.password>Happygo1!</cas.ticket.registry.jpa.password>
-			</properties>
-			<dependencies>
-				<dependency>
-					<groupId>com.oracle.jdbc</groupId>
-					<artifactId>ojdbc10</artifactId>
-					<version>19.3.0.0</version>
-				</dependency>
-			</dependencies>
-		</profile>
-		<profile>
-			<id>tomcat-postgresql</id>
-			<properties>
-				<cas.ticket.registry.jpa.dialect>org.hibernate.dialect.PostgreSQLDialect</cas.ticket.registry.jpa.dialect>
-				<cas.ticket.registry.jpa.url>jdbc:postgresql://devdb:5432/postgres?currentSchema=cas</cas.ticket.registry.jpa.url>
-				<cas.ticket.registry.jpa.driverClass>org.postgresql.Driver</cas.ticket.registry.jpa.driverClass>
-				<cas.ticket.registry.jpa.user>CAS</cas.ticket.registry.jpa.user>
-				<cas.ticket.registry.jpa.password>Happygo1!</cas.ticket.registry.jpa.password>
-			</properties>
-			<dependencies>
-				<dependency>
-					<groupId>org.postgresql</groupId>
-					<artifactId>postgresql</artifactId>
-					<version>42.2.12</version>
-				</dependency>
-			</dependencies>
-		</profile>
-		<profile>
-			<id>tomcat-sqlserver</id>
-			<properties>
-				<cas.ticket.registry.jpa.dialect>org.hibernate.dialect.SQLServer2012Dialect</cas.ticket.registry.jpa.dialect>
-				<cas.ticket.registry.jpa.url>jdbc:sqlserver://devdb:1433;databaseName=cas;</cas.ticket.registry.jpa.url>
-				<cas.ticket.registry.jpa.driverClass>com.microsoft.sqlserver.jdbc.SQLServerDriver</cas.ticket.registry.jpa.driverClass>
-				<cas.ticket.registry.jpa.user>CAS</cas.ticket.registry.jpa.user>
-				<cas.ticket.registry.jpa.password>Happygo1!</cas.ticket.registry.jpa.password>
-			</properties>
-			<dependencies>
-				<dependency>
-					<groupId>com.microsoft.sqlserver</groupId>
-					<artifactId>mssql-jdbc</artifactId>
-					<version>8.2.2.jre11</version>
-				</dependency>
-			</dependencies>
-		</profile>
-
-	</profiles>
+	
 
 </project>
