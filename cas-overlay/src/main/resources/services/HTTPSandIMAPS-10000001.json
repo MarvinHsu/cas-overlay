@@ -11,6 +11,7 @@
     "pattern" : "^(https|http|imaps)://.*"
   },
   "logoutType" : "BACK_CHANNEL",
+  "logoutUrl" : "http://localhost:9443/cas/exit/cas",
   "accessStrategy" : {
     "@class" : "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
     "enabled" : true,

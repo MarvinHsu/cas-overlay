@@ -120,7 +120,7 @@
 	</dependencies>
 
 	<properties>
-		<cas.version>6.6.0</cas.version>
+		<cas.version>6.6.1</cas.version>
 		<springboot.version>2.7.3</springboot.version>
 		<!-- app.server could be -jetty, -undertow, -tomcat, or blank if you plan 
 			to provide appserver -->
