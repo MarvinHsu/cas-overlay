@@ -1,15 +1,17 @@
 {
-  "@class" : "org.apereo.cas.services.RegexRegisteredService",
-  "serviceId" : "^(https|http|imaps)://.*",
+  "@class" : "org.apereo.cas.services.CasRegisteredService",
+  "serviceId" : "^https://localhost.+",
   "name" : "HTTPS, HTTP and IMAPS",
   "id" : 10000001,
   "description" : "This service definition authorizes all application urls that support HTTPS, HTTP and IMAPS protocols.",
   "evaluationOrder" : 10000,
+  "supportedProtocols": [ "java.util.HashSet", ["CAS30"] ],
   "proxyPolicy" : {
     "@class" : "org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
     "pattern" : "^(https|http|imaps)://.*"
   },
   "logoutType" : "BACK_CHANNEL",
+  "logoutUrl" : "http://localhost:9443/cas/exit/cas",
   "accessStrategy" : {
     "@class" : "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
     "enabled" : true,
