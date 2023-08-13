@@ -6,7 +6,7 @@
 	<groupId>com.hsuforum.cas-overlay</groupId>
 	<artifactId>cas-overlay</artifactId>
 	<packaging>war</packaging>
-	<version>3.0.3</version>
+	<version>3.0.4</version>
 
 	<build>
 		<plugins>
