@@ -113,10 +113,15 @@
 			<artifactId>cas-server-support-saml</artifactId>
 			<version>${cas.version}</version>
 		</dependency>
+		<dependency>
+		    <groupId>org.apereo.cas</groupId>
+		    <artifactId>cas-server-support-oidc</artifactId>
+		    <version>${cas.version}</version>
+		</dependency>
 	</dependencies>
 
 	<properties>
-		<cas.version>8.0.0</cas.version>
+		<cas.version>8.0.0-RC6</cas.version>
 		<springboot.version>4.1.0</springboot.version>
 		<!-- app.server could be -jetty, -undertow, -tomcat, or blank if you plan 
 			to provide appserver -->
