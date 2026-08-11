@@ -1,6 +1,6 @@
 # cas-overlay
 
-This repository is an Apereo CAS overlay project built with Maven and packaged as a WAR for a Tomcat-based CAS server.
+This repository is an Apereo CAS overlay project built with Maven and packaged as a WAR for a Tomcat-based CAS server. The product introduction link is [https://www.hsuforum.com/default.jsf?tabParam=easPortalTab](https://www.hsuforum.com/default.jsf?tabParam=easPortalTab "Go to The product introduction").
 
 ## Project overview
 
